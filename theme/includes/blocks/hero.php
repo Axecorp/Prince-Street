@@ -19,6 +19,7 @@
         </div>
         <div class="card">
             <div class="card-content">
+                <div class="tagline-m"><?php echo $tagline?></div>
                 <div class="card-description">
                     <?php echo $prd_desc;?>
                 </div>

@@ -1,6 +1,21 @@
 $(document).ready(function(){
     let initTop = parseInt($(".models").css("top").replace("px", ""));
     let initLeft = parseInt($(".models").css("left").replace("px", ""));
+    // let initLeft = parseInt($(".models").css("left").replace("px", ""));
+    $(window).resize(function(){
+        if($(".hero").hasClass("active")){
+            if ($(window).innerWidth() > 991) {
+                $(".models").css({
+                    "left" : `${-85}px`,
+                });
+            }
+            if ($(window).innerWidth() <= 991) {
+                $(".models").css({
+                    "left" : `${0}px`,
+                });
+            }
+        }
+    })
     $('#fullpage').fullpage({ 
         // navigation: false,
         // sectionSelector: '.hero, .returns, .conversion, .brand-value, .shopify',
@@ -14,7 +29,14 @@ $(document).ready(function(){
     $(window).scroll(function(){
         let top = initTop + $(window).height();
         if($(".hero").hasClass("active")){
-            $("#gif1").css("scale", "100%");
+            if($(window).innerWidth() > 1400){
+                $("#gif1").css("scale", "100%");
+            }else if(($(window).innerWidth() <= 1400) && ($(window).innerWidth() > 991)){
+                $("#gif1").css("scale", "90%");
+            }else if($(window).innerWidth() <= 991){
+                $("#gif1").css("scale", "100%");
+                console.log("dasfsdf")
+            }
             $("#gif2").removeClass("show");
             $("#gif3").removeClass("show");
             $("#gif4").removeClass("show");
@@ -22,13 +44,23 @@ $(document).ready(function(){
             $(".models").css({
                 "top" : `${initTop}px`,
                 "left" : `${initLeft}px`,
+                "transform" : "translateX(0%)"
             });
+            if ($(window).innerWidth() <= 991) {
+                $(".models").css({
+                    "top" : `${initTop}px`,
+                    "left" : `${0}px`,
+                    "transform" : "translateX(0%)"
+                });
+            }
             $(".media-item").fadeOut(500);
         }
         if($(".returns").hasClass("active")){
+            // if($(window).innerWidth() > 1400)
             $(".models").css({
                 "top" : `${($(window).height()*1) - 100}px`,
-                "left" : "300px",
+                "left" : "50%",
+                "transform" : "translateX(-50%)"
             });
             $("#gif1").css("scale", "60%");
             $("#gif1").removeClass("show");

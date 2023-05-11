@@ -26,15 +26,15 @@
             case 'returns':
               include 'blocks/returns.php';
               break;
-            case 'conversion':
-              include 'blocks/conversion.php';
-              break;
-            case 'brand_value':
-              include 'blocks/brand_value.php';
-              break;
-            case 'shopify':
-              include 'blocks/shopify.php';
-              break;
+            // case 'conversion':
+            //   include 'blocks/conversion.php';
+            //   break;
+            // case 'brand_value':
+            //   include 'blocks/brand_value.php';
+            //   break;
+            // case 'shopify':
+            //   include 'blocks/shopify.php';
+            //   break;
             
           }
         }
