@@ -19,16 +19,21 @@
     padding: 0 30px;
     position: relative;
     height: 100vh;
+    .fp-tableCell{
+        display: flex;
+        align-items: center;
+    }
     .inner{
+        // height: 100%;
         position: relative;
         display: flex;
-        padding: 176px 0 130px 0;
+        // padding: 176px 0 130px 0;
         .models{
             transition: 800ms ease;
             position: absolute;
             position: absolute;
             left: -85px;
-            top: 96px;
+            top: -96px;
             z-index: 3;
             width: 548px;
             scale: 100%;
@@ -36,8 +41,6 @@
         .gif{
             position: absolute;
             transition: 400ms ease;
-            top: 0;
-            left: 0;
             // width: 100%;
             opacity: 0;
             top: -96px;

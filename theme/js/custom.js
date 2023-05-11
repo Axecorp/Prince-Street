@@ -27,7 +27,7 @@ $(document).ready(function(){
         }
         if($(".returns").hasClass("active")){
             $(".models").css({
-                "top" : `${($(window).height()*1) + 30}px`,
+                "top" : `${($(window).height()*1) - 100}px`,
                 "left" : "300px",
             });
             $("#gif1").css("scale", "60%");
@@ -38,7 +38,7 @@ $(document).ready(function(){
         }
         if($(".conversion").hasClass("active")){
             $(".models").css({
-                "top" : `${($(window).height()*2) + 30}px`,
+                "top" : `${($(window).height()*2) - 100}px`,
                 "left" : "600px",
             });
             $("#gif1").removeClass("show");
@@ -50,7 +50,7 @@ $(document).ready(function(){
         }
         if($(".brand-value").hasClass("active")){
             $(".models").css({
-                "top" : `${($(window).height()*3) + 30}px`,
+                "top" : `${($(window).height()*3) - 100}px`,
                 "left" : "600px",
             });
             $("#gif1").removeClass("show");
@@ -60,7 +60,7 @@ $(document).ready(function(){
         }
         if($(".shopify").hasClass("active")){
             $(".models").css({
-                "top" : `${($(window).height()*4) + $(window).height()/4 + 70}px`,
+                "top" : `${($(window).height()*4) + $(window).height()/4 - 70}px`,
                 "left" : "480px",
             });
             $("#gif1").removeClass("show");
