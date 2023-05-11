@@ -1,19 +1,24 @@
+#myMenu{
+    // display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    // height: 100px;
+    li{
+        // width: 20px;
+        // height: 20px;
+        // background-color: red;
+        margin: 20px;
+    }
+}
 .hero{
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0 30px;
     position: relative;
     height: 100vh;
-    #main_menu{
-        // display: none;
-        height: 100px;
-        .menu-item{
-            width: 20px;
-            height: 20px;
-            background-color: red;
-            margin: 20px;
-        }
-    }
     .inner{
         position: relative;
         display: flex;
@@ -33,7 +38,7 @@
             transition: 400ms ease;
             top: 0;
             left: 0;
-            width: 100%;
+            // width: 100%;
             opacity: 0;
             top: -96px;
             left: -40px;
@@ -41,6 +46,10 @@
                 scale: 100%;
                 top: 0;
                 left: 0;
+            }
+            &#gif4{
+                left: 50%;
+                transform: translateX(-50%);
             }
             &.show{
                 opacity: 1;
@@ -161,6 +170,7 @@
             width: 37px;
             height: 37px;
             transition: 200ms ease;
+            cursor: pointer;
             &:hover{
                 transition: 200ms ease;
                 transform: translateY(5px);

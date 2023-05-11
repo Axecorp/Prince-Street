@@ -2,9 +2,11 @@ $(document).ready(function(){
     let initTop = parseInt($(".models").css("top").replace("px", ""));
     let initLeft = parseInt($(".models").css("left").replace("px", ""));
     $('#fullpage').fullpage({ 
+        // navigation: false,
+        // sectionSelector: '.hero, .returns, .conversion, .brand-value, .shopify',
+        // anchors: ['section1', 'section2', 'section3', 'section4', 'section5'],
         scrollBar: true,
-        menu: '#main_menu',
-        // sectionSelector: '.hero, .returns',
+        // menu: '#myMenu',
     });
     $(".scroll-down .icon").click(function(){
         $("#main_menu .menu-item").eq(parseInt($(this).parent().attr("no"))).click()
@@ -14,6 +16,8 @@ $(document).ready(function(){
         if($(".hero").hasClass("active")){
             $("#gif1").css("scale", "100%");
             $("#gif2").removeClass("show");
+            $("#gif3").removeClass("show");
+            $("#gif4").removeClass("show");
             $("#gif1").delay(400).addClass("show");
             $(".models").css({
                 "top" : `${initTop}px`,
@@ -28,6 +32,8 @@ $(document).ready(function(){
             });
             $("#gif1").css("scale", "60%");
             $("#gif1").removeClass("show");
+            $("#gif3").removeClass("show");
+            $("#gif4").removeClass("show");
             $("#gif2").delay(400).addClass("show");
         }
         if($(".conversion").hasClass("active")){
@@ -35,7 +41,9 @@ $(document).ready(function(){
                 "top" : `${($(window).height()*2) + 30}px`,
                 "left" : "600px",
             });
+            $("#gif1").removeClass("show");
             $("#gif3").removeClass("show");
+            $("#gif4").removeClass("show");
             if(!($("#gif2").hasClass("show"))){
                 $("#gif2").delay(400).addClass("show");
             }
@@ -45,10 +53,26 @@ $(document).ready(function(){
                 "top" : `${($(window).height()*3) + 30}px`,
                 "left" : "600px",
             });
+            $("#gif1").removeClass("show");
             $("#gif2").removeClass("show");
+            $("#gif4").removeClass("show");
             $("#gif3").delay(400).addClass("show");
         }
+        if($(".shopify").hasClass("active")){
+            $(".models").css({
+                "top" : `${($(window).height()*4) + $(window).height()/4 + 70}px`,
+                "left" : "480px",
+            });
+            $("#gif1").removeClass("show");
+            $("#gif2").removeClass("show");
+            $("#gif3").removeClass("show");
+            if($(".big-link").css("display") != "none")
+            $("#gif4").delay(400).addClass("show");
+        }
     });
+
+    //smallprints 
+
     $(".smallprint").click(function(){
         $("#gif2").removeClass("show");
         if(!($(".media-item").eq($(this).index()).css("display") != "none")){
@@ -58,8 +82,16 @@ $(document).ready(function(){
         if($(this).hasClass("show-model")){
             $("#gif2").addClass("show");
         }
-        // $(".smallprint").removeClass("active");
-        // $(this).addClass("active");
+    });
+    $(".smallprint-shopify").click(function(){
+        $("#gif4").removeClass("show");
+        if(!($(".media-item-shopify").eq($(this).index()).css("display") != "none")){
+            $(".media-item-shopify").fadeOut(500);
+            $(".media-item-shopify").eq($(this).index()).fadeIn(500);
+        }
+        if($(this).hasClass("big-link-trigger")){
+            $("#gif4").addClass("show");
+        }
     });
 
     //description blurb
@@ -112,5 +144,11 @@ $(document).ready(function(){
                 }, 500);
             }, 200);
         })
+    })
+
+    //scroll-bottom
+
+    $(".scroll-down .icon").click(function(){
+        $.fn.fullpage.moveSectionDown();
     })
 })

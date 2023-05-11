@@ -9,6 +9,7 @@
 .brand-value{
     padding: 0 30px;
     height: 100vh;
+    position: relative;
     .inner{
         height: 100%;
         position: relative;
@@ -161,6 +162,14 @@
                 text-align: center;
                 color: #3678E6;
                 margin-bottom: 5px;
+            }
+            .icon{
+                transition: 200ms ease;
+                cursor: pointer;
+                &:hover{
+                    transition: 200ms ease;
+                    transform: translateY(5px);
+                }
             }
         }
     }

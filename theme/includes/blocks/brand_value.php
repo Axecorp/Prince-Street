@@ -1,4 +1,4 @@
-<section class="section brand-value">
+<section class="section brand-value"  id="brand-value">
     <div class="inner">
         <h2 class="heading"><?php echo $block["heading"];?></h2>
         <div class="screen">
@@ -49,7 +49,7 @@
         </div>
         <div class="scroll-down" no="4">
             <div class="text"><?php echo $block["scroll_down"]?></div>
-            <svg width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="icon" width="29" height="16" viewBox="0 0 29 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M1 1L14.5 14.5L28 1" stroke="black" stroke-opacity="0.24" stroke-linecap="round"/>
             </svg>
         </div>

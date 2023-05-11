@@ -8,11 +8,8 @@
  $prd_desc = $block["card"]["product_description"];
  $rating = $block["card"]["rating"];
 ?>
-<section class="section hero" style="background-image: url(<?php echo $bg;?>);">    
-    <div id="main_menu">
-        <div class="menu-item"></div>
-        <div class="menu-item"></div>
-    </div>
+<section class="section hero" id="hero" style="background-image: url(<?php echo $bg;?>);">    
+
     <div class="inner">
         <div class="models">
             <img id="gif1" src="<?php echo wp_get_attachment_image_url(89, "full")?>" alt="" class="gif show">

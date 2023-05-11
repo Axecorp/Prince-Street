@@ -1,7 +1,7 @@
 <?php
 
     global $post;
-    get_header();?>
+    get_header();?> 
     <div id="fullpage">
         <?php 
             get_blocks();

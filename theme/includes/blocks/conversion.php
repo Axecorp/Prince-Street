@@ -1,4 +1,4 @@
-<section class="section conversion" style="background-image: url(<?php echo ($block["background_image"]);?>);">
+<section class="section conversion" id="conversion"  style="background-image: url(<?php echo ($block["background_image"]);?>);">
     <div class="inner">
         <h2 class="heading"><?php echo $block["heading"];?></h2>
         <div class="stats">

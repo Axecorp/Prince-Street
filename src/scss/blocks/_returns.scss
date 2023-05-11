@@ -382,6 +382,7 @@
             z-index: 5;
             .icon{
                 transition: 200ms ease;
+                cursor: pointer;
                 &:hover{
                     transition: 200ms ease;
                     transform: translateY(5px);
