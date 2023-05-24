@@ -5,13 +5,29 @@
     100% {
         background-position: top right;
     }
-  }
+}
 
 .returns{
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     padding: 0 30px;
     height: 100vh;
+    position: relative;
+    @media(max-width: 767px){
+        height: auto !important;
+    }
+    .fp-tableCell{
+        height: auto !important;
+    }
+    .model2{
+        position: absolute;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        z-index: 3;
+    }
     .inner{
         height: 100%;
         position: relative;
@@ -26,10 +42,25 @@
             text-align: center;
             position: relative;
             z-index: 5;
+            @media(max-width: 567px){
+                text-align: left;
+                font-size: 25px;
+                margin-left: 10px;
+            }
         }
         .stats{
             margin-left: 110px;
             text-transform: uppercase;
+            position: absolute;
+            margin-top: 25px;
+            @media(max-width: 991px){
+                margin-left: 70px;
+            }
+            @media(max-width: 767px){
+                margin-left: 0px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
             // @media(max-width: 991px){
             //     // margin-left: 0px;
             // }
@@ -49,6 +80,14 @@
                 background-clip: text;
                 text-fill-color: transparent;
                 mix-blend-mode: multiply;
+                @media(max-width: 767px){
+                    font-size: 36px;
+                }
+                @media(max-width: 567px){
+                    font-size: 30px;
+                    margin-left: 60px;
+                    margin-bottom: 20px;
+                }
             }
             .numbers{
                 font-family: $lato;
@@ -62,6 +101,15 @@
                 background-clip: text;
                 text-fill-color: transparent;
                 mix-blend-mode: multiply;
+                @media(max-width: 767px){
+                    font-size: 200px;
+                }
+                @media(max-width: 567px){
+                    font-size: 180px;
+                }
+                @media(max-width: 450px){
+                    font-size: 150px;
+                }
             }
             .stat{
                 font-family: $lato;
@@ -77,6 +125,21 @@
                 mix-blend-mode: multiply;
                 position: relative;
                 z-index: 5;
+                @media(max-width: 767px){
+                    font-size: 40px;
+                }
+                @media(max-width: 567px){
+                    margin-left: 60px;
+                }
+            }
+        }
+        .mobile-flex{
+            @media(max-width:767px){
+                display: flex;
+                flex-direction: column;
+                margin-top: 270px;
+                grid-gap: 16px;
+                padding-bottom: 200px;
             }
         }
         .description-blurb{
@@ -90,6 +153,12 @@
             border: 1px solid rgba(255, 255, 255, 0.4);
             border-radius: 24px;
             background: rgba(31, 31, 31, 0.9);
+            @media(max-width: 767px){
+                top: 370px;
+            }
+            @media(max-width:767px){
+                position: static;
+            }
             .heart{
                 position: absolute;
                 cursor: pointer;
@@ -148,6 +217,16 @@
             right: 85px;
             bottom: 23.5%;
             z-index: 5;
+            @media(max-width: 991px){
+                right: 20px;
+            }
+            @media(max-width: 767px){
+                top: 600px;
+                bottom: auto;
+                position: relative;
+                inset: auto;
+                align-self: flex-end;
+            }
             .peeker{
                 .peeker-wrap{
                     display: none;
@@ -210,6 +289,9 @@
                     opacity: 0.6;
                     width: 18px;
                     height: 18px;
+                    @media(max-width: 767px){
+                        display: none;
+                    }
                     svg{
                         position: absolute;
                         top: 0;
@@ -300,9 +382,9 @@
                         left: 50%;
                     }
                 }
+                animation: btnEffectReverse 0.3s ;
                 &:hover{
-                    transition: 300ms ease;
-                    padding: 14px 70px;
+                    animation: btnEffect 0.3s forwards;
                 }
                 &.engulf{
                     transition: 250ms ease;
@@ -384,7 +466,18 @@
             left: 50%;
             transform: translateX(-50%);
             align-items: center;
+            width: 100%;
+            justify-content: center;
             z-index: 5;
+            @media(max-width: 767px){
+                flex-direction: column-reverse;
+            }
+            @media(max-width: 567px){
+                scale: 0.8;
+                margin-left: -10%;
+                transform-origin: center;
+                max-width: 250px;
+            }
             .icon{
                 transition: 200ms ease;
                 cursor: pointer;

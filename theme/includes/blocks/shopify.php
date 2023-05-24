@@ -1,5 +1,5 @@
-<section class="section shopify" id="shopify" >
-    <img src="<?php echo $block["made_for_shopify_tag"]?>" alt="" class="shopify-tag">
+<section class="section shopify" id="section5" >
+    <!-- <img src="<?php echo $block["made_for_shopify_tag"]?>" alt="" class="shopify-tag"> -->
     <div class="inner">
         <div class="heading" style="background: url(<?php echo $block["heading_background"]?>);">
             <?php echo $block["heading"];?>
@@ -50,11 +50,17 @@
             </div>
         </div>
         <div class="about">
+            <div class="heading-m" style="background: url(<?php echo $block["heading_background"]?>);">
+                <?php echo $block["heading"];?>
+            </div>
             <div class="about-heading">about us ...</div>
             <p class="about-description">
                 <?php echo $block["description"]?>
             </p>
         </div>
-        <a href="<?php echo $block["button"]["url"]?>" class="button"><?php echo $block["button"]["title"]?></a>
+        <a href="<?php echo $block["button"]["url"];?>" class="button">
+            <div class="icon"><img src="<?php echo wp_get_attachment_image_url(28, "full")?>" alt=""></div>
+            <div class="link"><?php echo $block["button"]["title"];?></div>
+        </a>
     </div>
 </section>

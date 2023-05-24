@@ -29,7 +29,7 @@
       }
     </style>
   </head>
-  <body class="<?php 
+  <body class="  <?php 
   
   $fadeMenu = get_field("menu_fade", $post->ID);
   if ($fadeMenu) {

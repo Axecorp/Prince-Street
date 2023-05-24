@@ -11,6 +11,7 @@ Version: THEME_VERSION
 @import 'mixins';
 @import 'global'; 
 @import 'footer';
+@import 'graphics';
 
 // Navigation
 
@@ -19,6 +20,8 @@ Version: THEME_VERSION
 
 
 // Blocks
+
+
 @import './blocks/hero';
 @import './blocks/returns';
 @import './blocks/conversion';
@@ -30,4 +33,12 @@ Version: THEME_VERSION
 
 table.xdebug-error.xe-warning {
     display: none;
+}
+
+.models{
+    display: none !important; //art haters did that
+}
+
+html{
+    scroll-behavior: smooth;
 }

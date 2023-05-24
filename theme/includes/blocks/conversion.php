@@ -1,10 +1,19 @@
-<section class="section conversion" id="conversion"  style="background-image: url(<?php echo ($block["background_image"]);?>);">
+<style>
+    @media (max-width: 567px) {
+        .conversion{
+            background-image: url(<?php echo  wp_get_attachment_image_url(198, "full")?>?>) !important ;
+            background-position: top !important;
+        }
+    }
+</style>
+<section class="section conversion" id="section3"  style="background-image: url(<?php echo ($block["background_image"]);?>);">
+
     <div class="inner">
         <h2 class="heading"><?php echo $block["heading"];?></h2>
         <div class="stats">
-            <div class="top gradient-text">up to</div>
-            <div class="numbers gradient-text"><?php echo $block["numbers"];?></div>
-            <div class="stat gradient-text"><?php echo $block["stat"];?></div>
+            <div class="top gradient-tex">up to</div>
+            <div class="numbers gradient-tex"><?php echo $block["numbers"];?></div>
+            <div class="stat gradient-tex"><?php echo $block["stat"];?></div>
         </div>
         <div class="blurb">
             <div class="box">
@@ -21,10 +30,12 @@
                 <div class="link"><?php echo $block["blurb"]["button"]["link"]["title"];?></div>
             </a>
         </div>
-        <div class="scroll-down" no="3">
-            <div class="icon">
-                <img src="<?php echo wp_get_attachment_image_url(27, "full")?>" alt="">
-            </div>
+        <div class="scroll-down">
+            <a href="#section4">
+                <div class="icon">
+                    <img src="<?php echo wp_get_attachment_image_url(27, "full")?>" alt="">
+                </div>
+            </a>
             <div class="text"><?php echo $block["scroll_down"]?></div>
         </div>
     </div>

@@ -8,12 +8,29 @@
 }
 .brand-value{
     padding: 0 30px;
-    height: 100vh;
+    // height: 100vh ;
     position: relative;
+    .model4{
+        position: absolute;
+        top: -100px;
+        left: calc(50% + 300px);
+        transform: translateX(-50%);
+        height: 100%;
+        z-index: 3;
+        @media(max-width: 991px){
+            left: calc(50% + 200px);
+        }
+        @media(max-width: 767px){
+            left: 50%;
+        }
+    }
     .inner{
         height: 100%;
         position: relative;
-        padding-top: 40px;
+        padding: 40px 0;
+        @media(max-width: 767px){
+            padding-bottom: 140px;
+        }
         .heading{
             font-family: $inter;
             font-weight: 700;
@@ -23,15 +40,36 @@
             color: #000000;
             text-align: center;
             margin-bottom: 30px;
+            @media(max-width: 991px){
+                margin-bottom: 100px;
+            }
+            @media(max-width: 567px){
+                text-align: left;
+                font-size: 25px;
+                margin-left: 10px;
+                margin-bottom: 7px;
+                line-height: 100%;
+            }
         }
         .screen{
             margin-left: 125px;
             border: 1px solid rgba(0, 0, 0, 0.24);
             border-radius: 10px; 
             max-width: 890px;
-            width: 100%;
+            // width: 100%;
             position: relative;
             padding: 15px;
+            @media(max-width: 767px){
+                margin-left: 0px;
+                margin-bottom: 210px;
+            }
+            @media(max-width: 567px){
+                padding: 12px;
+                margin-bottom: 180px;
+                width: calc(100% + 100px);
+                left: -80px;
+            }
+            margin-bottom: 100px;
             .dots{
                 display: flex;
                 justify-content: flex-end;
@@ -41,10 +79,20 @@
                 position: relative;
                 height: 377px;
                 width: 100%;
+                border-radius: 24px;
+                overflow: hidden;
+                @media(max-width: 567px){
+                    border-radius: 0px;
+                }
                 img{
                     position: absolute;
                     top: 0;
                     left: 0;
+                    @media(max-width: 567px){
+                        left: auto;
+                        right: 0;
+                        scale: 1.1;
+                    }
                 }
             }
             .hearts{
@@ -54,6 +102,22 @@
                 display: flex;
                 flex-direction: column;
                 grid-gap: 15px;
+                @media(max-width: 1250px){
+                    flex-direction: row;
+                    top: -15px;
+                    transform: translateY(-100%);
+                    left: auto;
+                    right: 0;
+                }
+                @media(max-width: 991px){
+                    grid-gap: 10px;
+                    top: 0px;
+                }
+                svg{
+                    @media(max-width: 991px){
+                        width: 50px;
+                    }
+                }
             }
         }
         .blurb{
@@ -66,6 +130,13 @@
             position: absolute;
             left: -15px;
             top: 200px;
+            z-index: 5;
+            @media(max-width: 767px){
+                position: relative;
+                inset: auto;
+                left: 50%;
+                transform: translateX(-50%);
+            }
             .box{
                 .title{
                     font-family: $lato;
@@ -99,6 +170,7 @@
                 left: 50%;
                 width: max-content;
                 bottom: -30px;
+                z-index: 5;
                 .icon{
                     width: 25px;
                     height: 35px;
@@ -110,9 +182,9 @@
                         left: 50%;
                     }
                 }
+                animation: btnEffectReverse 0.3s forwards;
                 &:hover{
-                    transition: 300ms ease;
-                    padding: 14px 70px;
+                    animation: btnEffect 0.3s forwards;
                 }
                 &.engulf{
                     transition: 250ms ease;
@@ -145,13 +217,34 @@
             text-fill-color: transparent;
             mix-blend-mode: multiply;
             text-align: center;
+            @media(max-width: 991px){
+                font-size: 280px;
+                line-height: 300px;
+                padding-bottom: 50px;
+            }
+            @media(max-width: 767px){
+                position: absolute;
+                top: 650px;
+                font-size: 200px;
+                line-height: 250px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            @media(max-width: 567px){
+                top: 520px;
+                font-size: 180px;
+                line-height: 216px;
+                letter-spacing: 0.02em;
+            }
         }
         .scroll-down{
             position: absolute;
             bottom: 15px;
             display: flex;
+            width: 100%;
             flex-direction: column;
             align-items: center;
+            z-index: 5;
             left: 50%;
             transform: translateX(-50%);
             .text{
@@ -181,6 +274,15 @@
         left: 0;
         grid-gap: 200px;
         top: 560px;
+        @media(max-width: 991px){
+            top: 650px;
+        }
+        @media(max-width: 767px){
+            top: 630px;
+        }
+        @media(max-width: 567px){
+            top: 505px;
+        }
         .marquee-item{
             animation: slide 40s infinite;
             animation-timing-function: linear;
@@ -197,6 +299,10 @@
             text-fill-color: transparent;
             mix-blend-mode: multiply;
             white-space: nowrap;
+            @media(max-width: 567px){
+                font-size: 55.4441px;
+                line-height: 67px;
+            }
         }
     }
 }
